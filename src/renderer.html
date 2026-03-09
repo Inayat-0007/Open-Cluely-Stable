@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
+    <title></title><!-- Intentionally blank for stealth -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- Drag Handle (top bar)                        -->
+    <!-- ============================================ -->
+    <div id="drag-handle" class="drag-handle">
+        <div class="drag-dots">⋮⋮</div>
+        <div id="status-indicator" class="status-indicator">✨ Ready</div>
+        <div class="window-controls">
+            <button id="minimize-btn" class="window-btn" title="Hide">−</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- Chat Container                               -->
+    <!-- ============================================ -->
+    <div id="chat-container" class="chat-container">
+        <!-- Messages are dynamically inserted here -->
+    </div>
+
+    <!-- ============================================ -->
+    <!-- Control Bar                                  -->
+    <!-- ============================================ -->
+    <div class="control-bar">
+        <div class="control-row">
+            <button id="mic-btn" class="control-btn" title="Record Audio (🎤)">🎤</button>
+            <button id="screen-btn" class="control-btn" title="Capture Screen (📸)">📸</button>
+            <button id="code-btn" class="control-btn" title="Code Assist (💻)">💻</button>
+            <button id="speak-btn" class="control-btn" title="Read Aloud (🔊)">🔊</button>
+            <button id="resume-btn" class="control-btn" title="Set Context (📄)">📄</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- Text Input Area                              -->
+    <!-- ============================================ -->
+    <div class="input-area">
+        <textarea id="text-input" 
+                  class="text-input" 
+                  placeholder="Ask anything..." 
+                  rows="2"
+                  autocomplete="off"
+                  spellcheck="false"></textarea>
+        <button id="send-btn" class="send-btn" title="Send Message">➤</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- Renderer Script                              -->
+    <!-- ============================================ -->
+    <script src="renderer.js"></script>
+</body>
+</html>
